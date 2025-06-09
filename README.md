@@ -36,11 +36,55 @@ This project analyzes customer satisfaction with mobile banking apps by collecti
 - If no reviews were returned, different language/country codes were tested.
 - All code and data are committed to the `task-1` branch with clear commit messages.
 
+## Task 2: Sentiment and Thematic Analysis
+
+### Tools & Libraries
+
+- **vaderSentiment**: For sentiment analysis
+- **scikit-learn**: For TF-IDF keyword extraction
+- **matplotlib**, **seaborn**: For visualization
+
+### Methodology
+
+1. **Sentiment Analysis**: Used VADER to compute sentiment scores and labels (positive, negative, neutral) for each review.
+2. **Thematic Analysis**:
+   - Extracted top keywords per bank using TF-IDF.
+   - Grouped keywords into themes using rule-based matching (e.g., 'Account Access Issues', 'Transaction Performance', etc.).
+3. **Insights**:
+   - Identified top satisfaction drivers and pain points for each bank.
+   - Generated visualizations for sentiment and theme distributions.
+4. **Output**: Enriched data saved as `reviews_with_sentiment_themes.csv`.
+
+### File Outputs
+
+- `reviews_with_sentiment_themes.csv`: Dataset with sentiment and theme annotations
+- Visualizations: Sentiment and theme distribution plots
+
+## Task 3: Store Cleaned Data in Oracle
+
+### Tools & Libraries
+
+- **oracledb**: Python driver for Oracle Database
+
+### Methodology
+
+1. **Schema Design**:
+   - Created `Banks` and `Reviews` tables in Oracle XE.
+2. **Data Insertion**:
+   - Inserted unique banks and all reviews (with sentiment and theme) into the database.
+3. **Notes**:
+   - Provided fallback instructions for PostgreSQL if Oracle XE is unavailable.
+   - Included error handling and credential placeholders in the notebook.
+
+### File Outputs
+
+- Oracle database tables populated with cleaned and enriched review data
+- (Optional) SQL dump for backup or migration
+
 ## Next Steps
 
-- Sentiment and thematic analysis (Task 2)
-- Database storage (Task 3)
-- Insights, visualization, and reporting (Task 4)
+- Task 4: Insights, visualization, and reporting
+- Update documentation and finalize the project report
 
 ---
 
