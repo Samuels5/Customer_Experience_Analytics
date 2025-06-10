@@ -67,6 +67,12 @@ coverage.xml
 *.db
 *.sqlite3
 
+# Data files
+data/
+*.csv
+*.sqlite3
+*.db
+
 # CSV/Output files
 *.csv
 *.tsv
